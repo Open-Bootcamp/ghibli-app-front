@@ -1,8 +1,8 @@
 import { Box, Text, Grid, Container } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import IndividualMovie from './IndividualMovie'
+import CardMovie from './CardMovie'
 
-export default function GridSection () {
+function MovieContainer () {
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function GridSection () {
   const listaMovies = data.map((movie) => {
     return (
       <div key={movie.id}>
-        <IndividualMovie movie={movie} />
+        <CardMovie movie={movie} />
       </div>
     )
   })
@@ -34,3 +34,5 @@ export default function GridSection () {
     </Box>
   )
 }
+
+export default MovieContainer
