@@ -1,10 +1,11 @@
-import { Box } from '@chakra-ui/react'
+import { Center } from '@chakra-ui/react'
+import Carousel from './components/Carousel'
 
 function App () {
   return (
-    <Box minH='100vh' bg='gray.700'>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita iusto, pariatur nostrum iste, delectus odio, eveniet hic debitis tenetur ipsum labore. Voluptates rerum quas iusto ipsum id vel sit ratione?</p>
-    </Box>
+    <Center minH='100vh' bg='gray.700'>
+      <Carousel />
+    </Center>
   )
 }
 
