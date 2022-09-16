@@ -1,6 +1,6 @@
 import { GridItem, Image, Text } from '@chakra-ui/react'
 
-export default function IndividualMovie ({ movie }) {
+function CardMovie ({ movie }) {
   return (
     <GridItem w='auto' h='auto'>
       <Image maxW='280px' h='380px' src={movie.image} objectFit='cover' />
@@ -8,3 +8,5 @@ export default function IndividualMovie ({ movie }) {
     </GridItem>
   )
 }
+
+export default CardMovie

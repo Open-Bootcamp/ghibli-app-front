@@ -1,23 +1,19 @@
 import { Flex } from '@chakra-ui/react'
-import Banner from './components/Banner'
-import Carousel from './components/Carousel'
-import GridSection from './components/GridSection'
+import Home from './components/Home'
+import MovieContainer from './components/MovieContainer'
 
 function App () {
   return (
-    <>
-      <Banner />
-      <Flex
-        minH='100vh'
-        bg='gray.700'
-        flexDirection='column'
-        alignItems='center'
-        fontFamily='Inter, sans-serif'
-      >
-        <Carousel />
-        <GridSection />
-      </Flex>
-    </>
+    <Flex
+      minH='100vh'
+      flexDirection='column'
+      alignItems='center'
+      fontFamily='Inter, sans-serif'
+    >
+      <Home />
+      <MovieContainer />
+    </Flex>
+
   )
 }
 
