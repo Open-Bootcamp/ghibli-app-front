@@ -56,7 +56,7 @@ function Banner () {
               closer to their hospitalized mother, and discover the surrounding
               trees are by Totoros, magical spirits of the forest. When the
               youngest runs away from home, the older sister seeks help from
-              home, the older sister seeks help from the spirits to find her
+              home, the older sister seeks help from the spirits to find her.
             </Text>
           </Box>
         </Stack>

@@ -1,9 +1,9 @@
 import { Box, Button } from '@chakra-ui/react'
 import { useState } from 'react'
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
+import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import Slider from 'react-slick'
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 
 // Settings for the slider
 const settings = {
@@ -53,7 +53,7 @@ export default function Carousel () {
         zIndex={2}
         onClick={() => slider?.slickPrev()}
       >
-        <BsChevronUp fontSize='3rem' fontFamily='body' />
+        <BsChevronUp fontSize='3rem' />
       </Button>
 
       <Button

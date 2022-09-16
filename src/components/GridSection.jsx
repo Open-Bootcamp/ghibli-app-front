@@ -1,22 +1,21 @@
-import { ChakraProvider, Box, Text, Grid } from '@chakra-ui/react'
+import { Box, Text, Grid, Container } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import IndividualMovie from './IndividualMovie'
-// import IndividualMovie from './IndividualMovie'
+
 export default function GridSection () {
-  const [datas, setData] = useState([])
+  const [data, setData] = useState([])
 
   useEffect(() => {
     async function response () {
-      await fetch('https://jsonplaceholder.typicode.com/photos')
+      await fetch('https://ghibliapi.herokuapp.com/films/')
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((err) => console.log(err))
     }
     response()
-    console.log(datas)
   }, [])
 
-  const listaMovies = datas.slice(0, 10).map((movie) => {
+  const listaMovies = data.map((movie) => {
     return (
       <div key={movie.id}>
         <IndividualMovie movie={movie} />
@@ -25,15 +24,13 @@ export default function GridSection () {
   })
 
   return (
-    <ChakraProvider>
-      <Box bg='#000000' w='100vw' h='auto'>
-        <Box margin='0 auto' maxWidth='800px'>
-          <Text color='white' pt='30px' pb='30px' fontSize='30px' fontWeight='800'>Popular Movies</Text>
-          <Grid gridTemplateColumns='repeat(4, 1fr)'>
-            {listaMovies}
-          </Grid>
-        </Box>
-      </Box>
-    </ChakraProvider>
+    <Box bg='#000000' w='100%'>
+      <Container margin='0 auto' maxW='container.xl'>
+        <Text color='white' py='30px' pl='7' fontSize='30px' fontWeight='800'>Popular Movies</Text>
+        <Grid gridTemplateColumns='repeat(auto-fit, minmax(290px, 1fr))' gap='2' placeItems='center'>
+          {listaMovies}
+        </Grid>
+      </Container>
+    </Box>
   )
 }
