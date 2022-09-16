@@ -2,10 +2,8 @@ import {
   Stack,
   Flex,
   Text,
-  VStack,
   useBreakpointValue,
-  Box,
-  Divider
+  Box
 } from '@chakra-ui/react'
 
 import { AiFillStar } from 'react-icons/ai'
@@ -22,28 +20,34 @@ function Banner () {
       backgroundSize='cover'
       backgroundPosition='center center'
     >
-      <VStack
+      <Flex
         w='full'
-        justify='center'
-        px={useBreakpointValue({ base: 4, md: 8 })}
+        justify='flex-start'
+        align='center'
+        px={useBreakpointValue({ base: 6, md: 14 })}
         bgGradient='linear(to-r, blackAlpha.900, transparent)'
       >
-        <Stack maxW='2xl' align='flex-start' spacing={6}>
+        <Stack maxW='2xl' align='flex-start' spacing={12}>
           <Text
             color='white'
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '4xl', md: '5xl' })}
+            fontSize={useBreakpointValue({ base: '4xl', md: '6.5rem' })}
+            pb={4}
           >
-            My Neightbor Totoro
+            My Neighbor Totoro
           </Text>
-          <Stack direction='row' align='center'>
-            <Box display='flex' alignItems='center' gap={6}>
+          <Stack direction='row' align='center' gap={6}>
+            <Box display='flex' alignItems='center' gap={2}>
               <AiFillStar color='yellow' />
-              <Text fontSize='2vh' as='b' color='white'>9.3</Text>
+              <Text fontSize='2vh' as='b' color='white'>
+                9.3
+              </Text>
             </Box>
             <Box>
-              <Text fontSize='2vh' as='b' color='white'>1h 43m | Producer - Hayao Miyazaki</Text>
+              <Text fontSize='2vh' as='b' color='white'>
+                1h 43m | Producer - Hayao Miyazaki
+              </Text>
             </Box>
           </Stack>
           <Box>
@@ -52,10 +56,11 @@ function Banner () {
               closer to their hospitalized mother, and discover the surrounding
               trees are by Totoros, magical spirits of the forest. When the
               youngest runs away from home, the older sister seeks help from
+              home, the older sister seeks help from the spirits to find her
             </Text>
           </Box>
         </Stack>
-      </VStack>
+      </Flex>
     </Flex>
   )
 }
