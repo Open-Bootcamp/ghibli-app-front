@@ -1,6 +1,5 @@
 import {
-  Box, Flex, Stack, Text,
-  useBreakpointValue
+  Box, Flex, Stack, Text
 } from '@chakra-ui/react'
 import { AiFillStar } from 'react-icons/ai'
 import Carousel from './Carousel'
@@ -21,7 +20,7 @@ function Home () {
         w='full'
         justify='space-between'
         align='center'
-        px={useBreakpointValue({ base: 6, md: 20 })}
+        px={{ base: 6, md: 20 }}
         bgGradient='linear(to-r, blackAlpha.900, transparent)'
       >
         <Stack maxW='2xl' align='flex-start' spacing={12}>
@@ -29,7 +28,7 @@ function Home () {
             color='white'
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '4xl', md: '6.5rem' })}
+            fontSize={{ base: '4xl', md: '6.5rem' }}
             pb={4}
           >
             My Neighbor Totoro
