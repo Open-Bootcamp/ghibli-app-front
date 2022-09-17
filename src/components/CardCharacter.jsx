@@ -8,7 +8,7 @@ function CardCharacters ({ charact }) {
         w='100px'
         h='100px'
         objectFit='cover'
-        src='https://media.vogue.es/photos/5ff05e472361f90ef2d5d967/2:3/w_1600,c_limit/HP_TOTORO_Registration_2880x1620.jpg'
+        src={charact.url}
       />
       <Text
         pt='10px'
@@ -17,7 +17,7 @@ function CardCharacters ({ charact }) {
         fontSize='20px'
         color='white'
         w='89px'
-      >Totoro
+      >{charact.name}
       </Text>
     </Box>
   )

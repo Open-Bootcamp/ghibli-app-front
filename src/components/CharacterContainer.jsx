@@ -7,17 +7,21 @@ function CharactersContainer () {
 
   useEffect(() => {
     async function response () {
-      await fetch('https://ghibliapi.herokuapp.com/films/')
-        .then(async (res) => await res.json())
-        .then((data) => setData(data))
-        .catch((err) => console.log(err))
+      const ghibli = await fetch('https://ghibli-app-back-production.up.railway.app/films/632621f97eb22fc78f6db9bf').then(async (res) => await res.json())
+
+      const urlCharacter = await Promise.all(
+        ghibli.characters.map(async (persona) => {
+          return await fetch(persona).then(async (res) => await res.json())
+        }))
+
+      setData(urlCharacter)
     }
     response()
   }, [])
 
   const listaCharacters = data.map((charact) => {
     return (
-      <div key={charact.id}>
+      <div key={charact._id}>
         <CardCharacter charact={charact} />
       </div>
     )
