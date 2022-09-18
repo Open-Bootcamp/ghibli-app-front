@@ -2,7 +2,7 @@ import React from 'react'
 import Information from './Information'
 import MovieMenu from './MovieMenu'
 
-function MovieDescription () {
+function MovieDescriptionInfo () {
   return (
     <>
       <MovieMenu />
@@ -12,4 +12,4 @@ function MovieDescription () {
   )
 }
 
-export default MovieDescription
+export default MovieDescriptionInfo
