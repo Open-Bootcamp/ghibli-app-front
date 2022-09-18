@@ -1,6 +1,5 @@
 import { Box, Container, Flex, Link, Text } from '@chakra-ui/react'
 import React from 'react'
-import Information from './Information'
 
 function MovieMenu () {
   return (
@@ -45,7 +44,6 @@ function MovieMenu () {
             Characters
           </Link>
         </Flex>
-        <Information />
       </Container>
     </Box>
   )
