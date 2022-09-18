@@ -1,4 +1,5 @@
-import { Box, Text, Grid, Container } from '@chakra-ui/react'
+import { Box, Text, Grid, Container, Link } from '@chakra-ui/react'
+import { Link as Linked } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import CardMovie from './CardMovie'
 
@@ -18,7 +19,7 @@ function MovieContainer () {
   const listaMovies = data.map((movie) => {
     return (
       <div key={movie.id}>
-        <CardMovie movie={movie} />
+        <Link as={Linked} to={`/movie/${movie.id}`}><CardMovie movie={movie} /></Link>
       </div>
     )
   })
