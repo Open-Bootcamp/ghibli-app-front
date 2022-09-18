@@ -1,7 +1,8 @@
 import { Box, Container, Flex, Link, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Link as Linked, useParams } from 'react-router-dom'
 
 function MovieMenu () {
+  const { id } = useParams()
   return (
     <Box bg='#000000'>
       <Container display='column' justify='flex-start' maxW='1200px'>
@@ -15,6 +16,8 @@ function MovieMenu () {
         </Text>
         <Flex width='35%' pb='50px' gap={4}>
           <Link
+            as={Linked}
+            to={`/movie/${id}`}
             color='white'
             bg='#000000'
             p='12px'
@@ -30,6 +33,8 @@ function MovieMenu () {
             Information
           </Link>
           <Link
+            as={Linked}
+            to={`/movie/ch/${id}`}
             color='white'
             bg='#000000'
             p='12px'
