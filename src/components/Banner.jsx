@@ -28,7 +28,7 @@ function Banner () {
             color='white'
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={{ base: '4xl', md: '6.5rem' }}
+            fontSize={{ base: '4xl', md: '6rem' }}
             pb={4}
           >
             My Neighbor Totoro
@@ -36,18 +36,18 @@ function Banner () {
           <Stack direction='row' align='center' gap={6}>
             <Box display='flex' alignItems='center' gap={2}>
               <AiFillStar color='yellow' />
-              <Text fontSize='3vh' as='b' color='white'>
+              <Text fontSize={{ base: '2.5vh', md: '3vh' }} as='b' color='white'>
                 9.3
               </Text>
             </Box>
             <Box>
-              <Text fontSize='3vh' as='b' color='white'>
+              <Text fontSize={{ base: '2.5vh', md: '3vh' }} as='b' color='white'>
                 1h 43m | Producer - Hayao Miyazaki
               </Text>
             </Box>
           </Stack>
           <Box>
-            <Text color='white' fontSize='2vh' as='b'>
+            <Text color='white' fontSize={{ base: '2vh', md: '2.5vh' }} as='b'>
               Two sisters move to the country with their father in order to be
               closer to their hospitalized mother, and discover the surrounding
               trees are by Totoros, magical spirits of the forest. When the
