@@ -8,7 +8,7 @@ function MovieContainer () {
 
   useEffect(() => {
     async function response () {
-      await fetch('https://ghibliapi.herokuapp.com/films/')
+      await fetch('https://ghibli-app-back-production.up.railway.app/films')
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((err) => console.log(err))
@@ -18,8 +18,8 @@ function MovieContainer () {
 
   const listaMovies = data.map((movie) => {
     return (
-      <div key={movie.id}>
-        <Link as={Linked} to={`/movie/${movie.id}`}><CardMovie movie={movie} /></Link>
+      <div key={movie._id}>
+        <Link as={Linked} to={`/movie/${movie._id}`}><CardMovie movie={movie} /></Link>
       </div>
     )
   })

@@ -1,16 +1,18 @@
 import { Box, Container, Grid } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import CardCharacter from './CardCharacter'
 
 function CharactersContainer () {
   const [data, setData] = useState([])
-
+  const { id } = useParams()
   useEffect(() => {
     async function response () {
-      const ghibli = await fetch('https://ghibli-app-back-production.up.railway.app/films/632621f97eb22fc78f6db9bf').then(async (res) => await res.json())
+      const ghibli = await fetch('https://ghibli-app-back-production.up.railway.app/films').then(async (res) => await res.json())
+      const [search] = ghibli.filter((movie) => movie._id === id)
 
       const urlCharacter = await Promise.all(
-        ghibli.characters.map(async (persona) => {
+        search.characters.map(async (persona) => {
           return await fetch(persona).then(async (res) => await res.json())
         }))
 
@@ -29,7 +31,7 @@ function CharactersContainer () {
   return (
     <Box bg='#000000' w='100%'>
       <Container maxW='container.xl' display='flex' justifyContent='center'>
-        <Grid maxW='800px' gridTemplateColumns='repeat(auto-fit, minmax(190px, 1fr))' gap='2' placeItems='center'>
+        <Grid w='800px' gridTemplateColumns='repeat(auto-fit, minmax(190px, 1fr))' gap='2' placeItems='center'>
           {listaCharacters}
         </Grid>
 
