@@ -1,25 +1,26 @@
-import { Box, Text, Image } from '@chakra-ui/react'
+import { Text, Image, Flex } from '@chakra-ui/react'
 
-function CardCharacters ({ charact }) {
+function CardCharacters ({ character }) {
   return (
-    <Box>
+    <Flex flexDir='column' align='center' w='160px' h='190px'>
       <Image
         borderRadius='100%'
-        w='100px'
-        h='100px'
+        w='120px'
+        h='120px'
         objectFit='cover'
-        src={charact.url}
+        src={character.url}
       />
       <Text
         pt='10px'
-        mb='80px'
         fontWeight='600'
         fontSize='20px'
+        textAlign='center'
         color='white'
-        w='89px'
-      >{charact.name}
+        w='100%'
+
+      >{character.name}
       </Text>
-    </Box>
+    </Flex>
   )
 }
 

@@ -25,18 +25,17 @@ function Information () {
   const movieData = movieList.length !== 0 && movieList[0]
 
   return (
-    <Container bg='#000' display='column' justify='flex-start' maxW='100%'>
-      <Box mx={{ base: 4, md: 14 }}>
+    <Container bg='#000' display='column' align='center' maxW='100%'>
+      <Box maxW='5xl' mx='auto'>
         <Grid
-          maxW='800px'
-          gap={{ base: 8, md: 2 }}
+          gap={{ base: 8, md: 10 }}
           gridTemplateColumns='repeat(auto-fit, minmax(290px, 1fr))'
           py={6}
         >
           <Box>
-            <Image h='450px' src={movieData.image} alt='movieImg' />
+            <Image maxH={{ base: '100%', sm: '450px' }} src={movieData.image} alt='movieImg' mx='auto' />
           </Box>
-          <Stack spacing={2}>
+          <Stack spacing={2} textAlign='left'>
             <Flex>
               <Text fontWeight='bold' flex={1} color='white'>
                 Japanese
