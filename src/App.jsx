@@ -3,9 +3,9 @@ import Routing from './Routes/Routing'
 
 function App () {
   return (
-    <Routing>
-      <Layout />
-    </Routing>
+    <Layout>
+      <Routing />
+    </Layout>
 
   )
 }

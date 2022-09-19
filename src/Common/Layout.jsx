@@ -1,19 +1,14 @@
-import { Flex } from '@chakra-ui/react'
 import React from 'react'
-import Home from '../components/Home'
-import MovieContainer from '../components/MovieContainer'
+import Banner from '../components/Banner'
+import Footer from './Footer'
 
-function Layout () {
+function Layout ({ children }) {
   return (
-    <Flex
-      minH='100vh'
-      flexDirection='column'
-      alignItems='center'
-      fontFamily='Inter, sans-serif'
-    >
-      <Home />
-      <MovieContainer />
-    </Flex>
+    <>
+      <Banner />
+      {children}
+      <Footer />
+    </>
   )
 }
 
