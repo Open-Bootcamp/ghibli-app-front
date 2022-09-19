@@ -132,7 +132,7 @@ function Information () {
                 Running time
               </Text>
               <Text flex={1} color='white'>
-                {movieData.running_time}
+                {movieData.running_time} minutes
               </Text>
             </Flex>
             <Flex>
