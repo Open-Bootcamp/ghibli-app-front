@@ -8,7 +8,7 @@ function Information () {
 
   useEffect(() => {
     async function response () {
-      await fetch('https://ghibliapi.herokuapp.com/films/')
+      await fetch('https://ghibli-app-back-production.up.railway.app/films')
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((err) => console.log(err))
@@ -18,7 +18,7 @@ function Information () {
 
   const movieList = data.filter((movie) => {
     return (
-      movie.id === id
+      movie._id === id
     )
   })
 
