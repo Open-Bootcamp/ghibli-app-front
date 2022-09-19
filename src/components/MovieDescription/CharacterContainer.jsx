@@ -1,26 +1,11 @@
 import { Text, Box, Container, Grid } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import useGetCharacter from '../../services/useGetCharacters'
 import CardCharacter from './CardCharacter'
 
 function CharactersContainer () {
-  const [data, setData] = useState([])
   const { id } = useParams()
-
-  useEffect(() => {
-    async function response () {
-      const ghibli = await fetch('https://ghibli-app-back-production.up.railway.app/films').then(async (res) => await res.json())
-      const [search] = ghibli.filter((movie) => movie._id === id)
-
-      const urlCharacter = await Promise.all(
-        search.characters.map(async (persona) => {
-          return await fetch(persona).then(async (res) => await res.json())
-        }))
-
-      setData(urlCharacter)
-    }
-    response()
-  }, [])
+  const data = useGetCharacter(id)
 
   return (
     <Box bg='#000000' w='100%'>

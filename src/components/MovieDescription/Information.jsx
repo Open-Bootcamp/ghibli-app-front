@@ -1,20 +1,11 @@
 import { Image, Text, Box, Flex, Grid, Stack, Container } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
+import useGetMovies from '../../services/useGetMovies'
 
 function Information () {
-  const [data, setData] = useState([])
   const { id } = useParams()
-
-  useEffect(() => {
-    async function response () {
-      await fetch('https://ghibli-app-back-production.up.railway.app/films')
-        .then((res) => res.json())
-        .then((data) => setData(data))
-        .catch((err) => console.log(err))
-    }
-    response()
-  }, [])
+  const data = useGetMovies()
 
   const movieList = data.filter((movie) => {
     return (
