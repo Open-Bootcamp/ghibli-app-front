@@ -4,7 +4,7 @@ import './loader.css'
 function Loader () {
   return (
     <Stack py={12}>
-      <div class='loader' />
+      <div className='loader' />
     </Stack>
   )
 }
