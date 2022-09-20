@@ -19,7 +19,7 @@ function Footer () {
       fontFamily='Inter, sans-serif'
     >
       <Stack display='flex' directon='flex-wrap' w={{ sm: '85vw', md: '100%', xl: '6xl' }}>
-        <Box borderTop='1px solid #ffffffa3' />
+        <Box borderTop='1px solid #ffffffa3' mb={6} />
         <HStack
           justify={{ base: 'space-around', md: 'space-between' }}
           gap={{ base: 2, md: 8 }}
@@ -141,8 +141,9 @@ function Footer () {
             </Grid>
           </HStack>
         </HStack>
-        <Flex justify='space-between' color='#ffffffa3'>
-          <Flex gap={4} align='center'>
+
+        <Flex justify='space-between' color='#ffffffa3' pt={6}>
+          <Flex gap={5} align='center'>
             <Link
               href='https://www.instagram.com/openbootcamp_/'
               target='_blank' rel='noreferrer'
@@ -166,7 +167,7 @@ function Footer () {
             </Link>
           </Flex>
           <Stack fontSize={{ base: '.75rem', sm: '2vh' }}>
-            <Text w='full' fontWeight={600}>
+            <Text w='full' fontWeight={300}>
               © Open WeekApps - 2022
             </Text>
           </Stack>

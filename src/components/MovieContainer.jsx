@@ -8,7 +8,7 @@ function MovieContainer () {
   const data = GetMovies()
 
   return (
-    <Box bg='#000000' w='100%'>
+    <Box bg='#000000' w='100%' minH='100vh'>
       <Container margin='0 auto' maxW='container.xl'>
         <Text color='white' py='30px' pl='7' fontSize='30px' fontWeight='800'>Popular Movies</Text>
         <Grid gridTemplateColumns='repeat(auto-fit, minmax(290px, 1fr))' gap='2' placeItems='center'>
