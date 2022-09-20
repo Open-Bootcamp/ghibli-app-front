@@ -1,0 +1,5 @@
+.border {
+  border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to top, #ffffff3d, #000);
+}

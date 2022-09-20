@@ -1,8 +1,12 @@
 import { Text, Image, Flex } from '@chakra-ui/react'
+import '../Common/borders.css'
 
 function CardCharacters ({ character }) {
   return (
-    <Flex flexDir='column' align='center' w='160px' h='190px'>
+    <Flex
+      className='border'
+      flexDir='column' align='center' w='240px' h='190px'
+    >
       <Image
         borderRadius='100%'
         w='120px'
