@@ -49,12 +49,22 @@ function Footer () {
                 Leaders
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/fabioalcocer' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/fabioalcocer' t
+                  arget='_blank'
+                  rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   Fabio [OB]
                 </Link>
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/Andres2310' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/Andres2310'
+                  target='_blank'
+                  rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   Andres Huerta
                 </Link>
               </GridItem>
@@ -73,7 +83,12 @@ function Footer () {
                 Laura Quintar
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/Dev-Juniorr' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/Dev-Juniorr'
+                  target='_blank'
+                  rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   ! Sebastián
                 </Link>
               </GridItem>
@@ -86,22 +101,40 @@ function Footer () {
                 Developers
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/HikenJos' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/HikenJos'
+                  target='_blank'
+                  rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   HikenJos
                 </Link>
               </GridItem>
               <GridItem pb={4} fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/mikejbp' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/mikejbp'
+                  target='_blank'
+                  rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   mikejbp
                 </Link>
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/AleVedoya' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/AleVedoya'
+                  target='_blank' rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   AleVedoya
                 </Link>
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
-                <Link href='https://github.com/JonatanHN' _hover={{ textDecoration: 'none' }}>
+                <Link
+                  href='https://github.com/JonatanHN'
+                  target='_blank' rel='noreferrer'
+                  _hover={{ textDecoration: 'none' }}
+                >
                   JonatanHN
                 </Link>
               </GridItem>
@@ -112,18 +145,21 @@ function Footer () {
           <Flex gap={4} align='center'>
             <Link
               href='https://www.instagram.com/openbootcamp_/'
+              target='_blank' rel='noreferrer'
               _hover={{ color: 'white' }}
             >
               <BsInstagram fontSize='2vh' />
             </Link>
             <Link
               href='https://twitter.com/Open_Bootcamp'
+              target='_blank' rel='noreferrer'
               _hover={{ color: 'white' }}
             >
               <BsTwitter fontSize='2vh' />
             </Link>
             <Link
               href='https://www.twitch.tv/openbootcamp'
+              target='_blank' rel='noreferrer'
               _hover={{ color: 'white' }}
             >
               <BsTwitch fontSize='2vh' />

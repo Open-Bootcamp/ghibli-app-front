@@ -1,6 +1,6 @@
 import {
   Image, Text, Box, Flex,
-  Grid, Stack, Container
+  Grid, Container, HStack, Divider
 } from '@chakra-ui/react'
 import { FaStar } from 'react-icons/fa'
 import { useParams } from 'react-router-dom'
@@ -27,7 +27,7 @@ function Information () {
           <Box maxW='5xl' mx='auto'>
             <Grid
               gap={{ base: 8, md: 10 }}
-              gridTemplateColumns='repeat(auto-fit, minmax(290px, 1fr))'
+              gridTemplateColumns='repeat(auto-fit, minmax(300px, 1fr))'
               py={6}
             >
               <Box>
@@ -38,89 +38,120 @@ function Information () {
                   mx='auto'
                 />
               </Box>
-              <Stack spacing={2} textAlign='left'>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Japanese
+              <HStack spacing={6} justify={{ base: 'center', md: 'flex-start' }}>
+                <Flex direction='column' align='flex-start' gap={{ base: 2, sm: 4, md: 4 }}>
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Japanese
                   </Text>
-                  <Text flex={1} color='white'>
-                    {movieData.original_title}
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Hepburn
                   </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Hepburn
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Directed by
                   </Text>
-                  <Text flex={1} color='gray'>
-                    {movieData.original_title_romanised}
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Written by
                   </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Directed by
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Produced by
                   </Text>
-                  <Text flex={1} color='white'>
-                    {movieData.director}
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Cinematography
                   </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Written by
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Music by
                   </Text>
-                  <Text flex={1} color='white'>
-                    {movieData.director}
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Release date
                   </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Produced by
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Running time
                   </Text>
-                  <Text flex={1} color='white'>
-                    {movieData.producer}
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Rating
                   </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Cinematography
-                  </Text>
-                  <Text flex={1} color='white'>
-                    Hisao Shirai
-                  </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Music by
-                  </Text>
-                  <Text flex={1} color='white'>
-                    Joe Hisaishi
-                  </Text>
-                </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Release date
-                  </Text>
-                  <Text flex={1} color='white'>
-                    {movieData.release_date}
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    fontWeight='bold' color='white'
+                  >Country
                   </Text>
                 </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Running time
+                <Divider orientation='vertical' />
+                <Flex direction='column' align='flex-start' gap={{ base: 2, sm: 4, md: 4 }}>
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >{movieData.original_title}
                   </Text>
-                  <Text flex={1} color='white'>
-                    {movieData.running_time} minutes
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='gray'
+                  >{movieData.original_title_romanised}
                   </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >{movieData.director}
+                  </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >{movieData.director}
+                  </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.855rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >{movieData.producer}
+                  </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.855rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >Hisao Shirai
+                  </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.855rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >Joe Hisaishi
+                  </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >{movieData.release_date}
+                  </Text>
+                  <Text
+                    fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
+                    color='white'
+                  >{movieData.running_time} minutes
+                  </Text>
+                  <Flex alignItems='center'>
+                    <Text fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }} display='flex' alignItems='center' gap={2} color='white'>
+                      {movieData.rt_score}
+                      <FaStar color='white' />
+                    </Text>
+                  </Flex>
+                  <Text fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }} color='white'>Japan</Text>
                 </Flex>
-                <Flex>
-                  <Text fontWeight='bold' flex={1} color='white'>
-                    Rating
-                  </Text>
-                  <Text display='flex' alignItems='center' gap={2} flex={1} color='white'>
-                    {movieData.rt_score}
-                    <FaStar color='white' />
-                  </Text>
-                </Flex>
-              </Stack>
+              </HStack>
             </Grid>
           </Box>
           )}
