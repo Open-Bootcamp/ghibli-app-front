@@ -126,12 +126,12 @@ function Information () {
                   <Text
                     fontSize={{ base: 'clamp(.855rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
                     color='white'
-                  >Hisao Shirai
+                  >{movieData.cinematography}
                   </Text>
                   <Text
                     fontSize={{ base: 'clamp(.855rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
                     color='white'
-                  >Joe Hisaishi
+                  >{movieData.music_by}
                   </Text>
                   <Text
                     fontSize={{ base: 'clamp(.85rem, 2vw, 1rem)', sm: 'clamp(.9rem, 3vw, 1rem)' }}
