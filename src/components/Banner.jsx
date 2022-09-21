@@ -1,6 +1,4 @@
-import {
-  Box, Flex, Stack, Text
-} from '@chakra-ui/react'
+import { Box, Flex, Show, Stack, Text } from '@chakra-ui/react'
 import { AiFillStar } from 'react-icons/ai'
 import Carousel from './Carousel'
 
@@ -18,17 +16,18 @@ function Banner () {
     >
       <Flex
         w='full'
-        justify='space-between'
+        justify={{ base: 'center', lg: 'space-between' }}
+        gap={8}
         align='center'
         px={{ base: 6, md: 20 }}
-        bgGradient='linear(to-r, blackAlpha.900, transparent)'
+        bgGradient='linear(to-t, blackAlpha.900, transparent)'
       >
-        <Stack maxW='2xl' align='flex-start' spacing={12}>
+        <Stack maxW={{ lg: '2xl' }} align='flex-start' spacing={12}>
           <Text
             color='white'
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={{ base: '4xl', md: '6rem' }}
+            fontSize={{ base: '6xl', md: '5rem' }}
             pb={4}
           >
             My Neighbor Totoro
@@ -36,18 +35,34 @@ function Banner () {
           <Stack direction='row' align='center' gap={6}>
             <Box display='flex' alignItems='center' gap={2}>
               <AiFillStar color='yellow' />
-              <Text fontSize={{ base: '2.5vh', md: '3vh' }} as='b' color='white'>
+              <Text
+                fontSize={{ base: '1.5rem', md: '1.75rem' }}
+                as='b'
+                color='white'
+              >
                 9.3
               </Text>
             </Box>
             <Box>
-              <Text fontSize={{ base: '2.5vh', md: '3vh' }} as='b' color='white'>
+              <Text
+                fontSize={{ base: '1.5rem', md: '1.75rem' }}
+                as='b'
+                color='white'
+              >
                 1h 43m | Producer - Hayao Miyazaki
               </Text>
             </Box>
           </Stack>
-          <Box>
-            <Text color='white' fontSize={{ base: '2vh', md: '2.5vh' }} as='b'>
+          <Box w={{ lg: '50vw' }}>
+            <Text
+              textAlign={{ md: 'left' }}
+              color='white'
+              fontSize={{
+                base: 'clamp(1.25rem, 2.5vh, 1.5rem)',
+                lg: 'clamp(.8rem, 2.5vh, 1.5rem)'
+              }}
+              as='b'
+            >
               Two sisters move to the country with their father in order to be
               closer to their hospitalized mother, and discover the surrounding
               trees are by Totoros, magical spirits of the forest. When the
@@ -56,7 +71,9 @@ function Banner () {
             </Text>
           </Box>
         </Stack>
-        <Carousel />
+        <Show above='lg'>
+          <Carousel />
+        </Show>
       </Flex>
     </Flex>
   )
