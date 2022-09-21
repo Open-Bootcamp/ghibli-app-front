@@ -50,8 +50,8 @@ function Footer () {
               </GridItem>
               <GridItem fontWeight={300} color='#ffffffa3'>
                 <Link
-                  href='https://github.com/fabioalcocer' t
-                  arget='_blank'
+                  href='https://github.com/fabioalcocer'
+                  target='_blank'
                   rel='noreferrer'
                   _hover={{ textDecoration: 'none' }}
                 >
