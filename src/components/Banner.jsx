@@ -22,7 +22,7 @@ function Banner () {
         px={{ base: 6, md: 20 }}
         bgGradient='linear(to-t, blackAlpha.900, transparent)'
       >
-        <Stack maxW={{ lg: '2xl' }} align='flex-start' spacing={12}>
+        <Stack maxW={{ lg: '2xl' }} align='flex-start' spacing={{ base: 5, md: 12 }}>
           <Text
             color='white'
             fontWeight={700}
